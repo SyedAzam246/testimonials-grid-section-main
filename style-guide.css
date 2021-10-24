@@ -12,15 +12,15 @@
 
   /* ### Primary */
 
-  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
-  --Moderate-violet: hsl(263, 55%, 52%);
-  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
-  --White: hsl(0, 0%, 100%);
+  --Very-dark-grayish-blue: 217, 19%, 35%;
+  --Moderate-violet: 263, 55%, 52%;
+  --Very-dark-blackish-blue: 219, 29%, 14%;
+  --White: 0, 0%, 100%;
 
   /* ### Neutral */
 
-  --Light-gray: hsl(0, 0%, 81%);
-  --Light-grayis-blue: hsl(210, 46%, 95%);
+  --Light-gray: 0, 0%, 81%;
+  --Light-grayis-blue: 210, 46%, 95%;
 
   /* Note for text colors: */
 
@@ -91,7 +91,8 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: 'Barlow Semi Condensed', Georgia;
+  font-family: "Barlow Semi Condensed", Georgia;
+  background-color: hsl(var(--Light-grayis-blue));
 }
 
 /* A elements that don't have a class get default styles */
@@ -131,5 +132,59 @@ select {
 }
 
 /* ----------------------------- */
-/************ ******** */
+/************ LAYOUT ************/
 /* ----------------------------- */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 260px);
+  grid-template-rows: repeat(2, 300px);
+  grid-gap: 15px;
+  grid-template-areas:
+    "a a b e"
+    "c d d e";
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.card {
+  display: grid;
+  background-color: chartreuse;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.card-1 {
+  grid-area: a;
+  background-color: hsl(var(--Moderate-violet));
+}
+.card-2 {
+  grid-area: b;
+  background-color: hsl(var(--Very-dark-grayish-blue));
+}
+.card-3 {
+  grid-area: c;
+  background-color: hsl(var(--White));
+}
+.card-4 {
+  grid-area: d;
+  background-color: hsl(var(--Very-dark-blackish-blue));
+}
+.card-5 {
+  grid-area: e;
+  background-color: hsl(var(--White));
+}
+
+/* ----------------------------- */
+/************ TYPOGRAPHY ************/
+/* ----------------------------- */
+
+.heading {
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 14px;
+}
