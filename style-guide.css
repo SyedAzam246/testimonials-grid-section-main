@@ -145,7 +145,7 @@ select {
   justify-content: center;
   align-content: center;
   height: 100%;
-  margin: 3% auto;
+  margin: 10% auto;
 }
 .card {
   display: grid;
@@ -243,7 +243,9 @@ p {
 
 }
 
-
+/* ----------------------------- */
+/************ Responsive design ************/
+/* ----------------------------- */
 @media only screen and (max-width: 1100px) {
   .container {
     grid-template-columns: repeat(4, 200px);
@@ -283,7 +285,7 @@ p {
 }
 @media only screen and (max-width: 520px) {
 .container {
-  margin: 3% 3%;
+  margin: 10% 3%;
 }
 
 }
