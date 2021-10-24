@@ -153,11 +153,16 @@ select {
   background-color: chartreuse;
   border-radius: 12px;
   padding: 20px;
+  grid-template-columns: 60px 1fr;
+  box-shadow: 4px 2px 6px hsla(240, 2%, 9%, 0.349)
 }
 
 .card-1 {
   grid-area: a;
   background-color: hsl(var(--Moderate-violet));
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 80% 0%;
 }
 .card-2 {
   grid-area: b;
@@ -175,16 +180,65 @@ select {
   grid-area: e;
   background-color: hsl(var(--White));
 }
+.status {
+  display: block;
+  font-size: 11px;
+  color: hsl(var(--White));
+  opacity: 50%;
+  font-weight: var(--weights-500);
+}
 
+img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
 /* ----------------------------- */
 /************ TYPOGRAPHY ************/
 /* ----------------------------- */
 
 .heading {
-  font-size: 21px;
+  font-size: 19px;
   line-height: 1.2;
+  color: hsl(var(--White));
+  font-weight: var(--weights-500);
+  grid-column: span 2;
 }
 
 p {
   font-size: 14px;
+  color: hsl(var(--White));
+  opacity: 70%;
+  grid-column: span 2;
+  text-align: justify;
+}
+
+/* ----------------------------- */
+/************ STYLE MODIFIER ************/
+/* ----------------------------- */
+.name {
+  color: hsl(var(--White));
+  align-items: center;
+}
+
+.card-5 .name, .card-3 .name {
+  color: hsl(var(--Very-dark-grayish-blue));
+}
+.card-5 .heading, .card-3 .heading {
+  color: hsl(var(--Very-dark-grayish-blue));
+}
+.card-5 p, .card-3 p {
+  color: hsl(var(--Very-dark-grayish-blue));
+  opacity: 70%;
+}
+.card-5 .status, .card-3 .status {
+  color: hsl(var(--Very-dark-grayish-blue));
+  opacity: 50%;
+  font-weight: var(--weights-500);
+}
+
+.card-1 img , .card-4 img {
+  border: 2px solid hsl(263, 80%, 71%);
+  
+
 }
